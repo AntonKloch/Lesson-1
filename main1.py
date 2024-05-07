@@ -1,9 +1,11 @@
-name = "Urban University"
-print(name[0])
-print(name[-1])
-print(name[2:6])
-print(name[::-1])
-print(len(name))
-name1 = 'University Urban '
-print((name1) + (name))
-
+def test():
+    a = 55
+    b = 45
+    print(a, b)
+test ()
+def test2 ():
+    c = 1
+    d = 2
+    e = 3
+    print(c, d, e)
+test2 ()
