@@ -1,5 +1,5 @@
 class House:
-    def init(self, name, number_of_floors):
+    def __init__(self, name, number_of_floors):
         self.name = name
         self.number_of_floors = number_of_floors
 
@@ -10,46 +10,42 @@ class House:
         else:
             print('Такого этажа не существует')
 
-    def len(self):
+    def __len__(self):
         return self.number_of_floors
 
-    def str(self):
+    def __str__(self):
         return f"Название {self.name}, кол-во этажей: {self.number_of_floors}"
 
-    def add(self, other):
+    def __add__(self, other):
         self.number_of_floors += other
 
-    def radd(self, value):
+    def __radd__(self, value):
         return self.add(value)
 
-    def iadd(self, value):
+    def __iadd__(self, value):
         return self.add(value)
 
-    def eq(self, other):
+    def __eq__(self, other):
         return self.number_of_floors == other.number_of_floors
 
-    def lt(self, other):
+    def __lt__(self, other):
         if isinstance(other.number_of_floors,int):
             return self.number_of_floors < other.number_of_floors
-        # else:
-        #     return NotImplemented
+        else:
+            return NotImplemented
 
-    def le(self, other):
+    def __le__(self, other):
         return self.number_of_floors <= other.number_of_floors
 
-
-
-
-
-h1 = House('ЖК Окна', 25)
+h1 = House('ЖК Окна', 20)
 h2 = House('ЖК Меркурий', 17)
 
-# h1.go_to(25)
-# h2 + 10 # add
-# h2.go_to(19)
-# print(h2.number_of_floors)
-# print(len(h1))
-#
-# print(h1)
-# print(h2)
+h1.go_to(25)
+h2 + 10
+h2.go_to(19)
+print(h2.number_of_floors)
+print(len(h1))
+
+print(h1)
+print(h2)
 print(h1 < h2)
