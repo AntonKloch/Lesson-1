@@ -6,10 +6,10 @@ class Vehicle:
         self.__color = color
 
 
-__COLOR_VARIANTS = ['blue', 'red', 'orange', 'yellow']
+    __COLOR_VARIANTS = ['blue', 'red', 'orange', 'yellow']
 
     def get_model(self):
-        return (f'Модель: "{self.__model}"')
+        return (f'Модель: {self.__model}')
 
     def get_horsepower(self):
         return (f'Мощность двигателя: "{self.__engine_power}"')
